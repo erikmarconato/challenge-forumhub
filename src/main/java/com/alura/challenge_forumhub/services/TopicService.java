@@ -38,7 +38,8 @@ public class TopicService {
                 topicEntity.getMessage(),
                 topicEntity.getCreationDate(),
                 topicEntity.getStatus(),
-                topicEntity.getCurse()
+                topicEntity.getCurse(),
+                topicEntity.getAnswers()
         ));
     }
 
@@ -52,7 +53,8 @@ public class TopicService {
                         t.getMessage(),
                         t.getCreationDate(),
                         t.getStatus(),
-                        t.getCurse()
+                        t.getCurse(),
+                        t.getAnswers()
                 )
         ).toList());
     }
@@ -71,7 +73,8 @@ public class TopicService {
                         t.getMessage(),
                         t.getCreationDate(),
                         t.getStatus(),
-                        t.getCurse()
+                        t.getCurse(),
+                        t.getAnswers()
                 )));
     }
 
@@ -110,7 +113,8 @@ public class TopicService {
                 topic.get().getCreationDate(),
                 topic.get().getUpdateDate(),
                 topic.get().getStatus(),
-                topic.get().getCurse()
+                topic.get().getCurse(),
+                topic.get().getAnswers()
         ));
     }
 }

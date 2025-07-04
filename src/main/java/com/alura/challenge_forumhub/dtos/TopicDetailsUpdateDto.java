@@ -3,6 +3,7 @@ package com.alura.challenge_forumhub.dtos;
 import com.alura.challenge_forumhub.enums.TopicStatusEnum;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public record TopicDetailsUpdateDto(
         Long id,
@@ -17,6 +18,8 @@ public record TopicDetailsUpdateDto(
 
         TopicStatusEnum status,
 
-        String curse
+        String curse,
+
+        List<String> answers
 ) {
 }

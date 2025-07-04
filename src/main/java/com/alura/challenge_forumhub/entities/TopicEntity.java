@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "topicos")
@@ -36,4 +38,10 @@ public class TopicEntity {
 
     @Column(name = "curso")
     private String curse;
+
+    @Column(name = "respostas")
+    private List<String> answers = new ArrayList<>();
+
 }
+
+
