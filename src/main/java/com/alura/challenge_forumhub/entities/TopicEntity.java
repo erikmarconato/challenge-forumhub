@@ -28,6 +28,9 @@ public class TopicEntity {
     @Column(name = "data_criacao")
     private LocalDateTime creationDate;
 
+    @Column(name = "data_atualizacao")
+    private LocalDateTime updateDate;
+
     @Enumerated(EnumType.STRING)
     private TopicStatusEnum status;
 
