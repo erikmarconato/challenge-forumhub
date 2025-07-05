@@ -5,9 +5,8 @@ import com.alura.challenge_forumhub.dtos.TopicDetailsUpdateDto;
 import com.alura.challenge_forumhub.dtos.TopicRegistrationDto;
 import com.alura.challenge_forumhub.entities.TopicEntity;
 import com.alura.challenge_forumhub.enums.TopicStatusEnum;
-import com.alura.challenge_forumhub.exceptions.TopicNotFoundException;
+import com.alura.challenge_forumhub.infra.exceptions.TopicNotFoundException;
 import com.alura.challenge_forumhub.repositories.TopicRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -19,8 +18,11 @@ import java.util.Optional;
 @Service
 public class TopicService {
 
-    @Autowired
-    private TopicRepository topicRepository;
+    private final TopicRepository topicRepository;
+
+    public TopicService(TopicRepository topicRepository) {
+        this.topicRepository = topicRepository;
+    }
 
     public ResponseEntity<TopicDetailsDto> saveTopic(TopicRegistrationDto topicRegistrationDto) {
         TopicEntity topicEntity = new TopicEntity();

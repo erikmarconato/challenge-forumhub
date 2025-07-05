@@ -1,6 +1,6 @@
 package com.alura.challenge_forumhub.controllers;
 
-import com.alura.challenge_forumhub.exceptions.TopicNotFoundException;
+import com.alura.challenge_forumhub.infra.exceptions.TopicNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
