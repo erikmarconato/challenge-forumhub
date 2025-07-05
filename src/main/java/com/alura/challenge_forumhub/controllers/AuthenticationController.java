@@ -6,7 +6,6 @@ import com.alura.challenge_forumhub.dtos.RegisterUserDto;
 import com.alura.challenge_forumhub.services.AuthenticationService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
