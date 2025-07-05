@@ -27,6 +27,10 @@ public class TopicEntity {
     @Column(name = "mensagem")
     private String message;
 
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private UserEntity user;
+
     @Column(name = "data_criacao")
     private LocalDateTime creationDate;
 

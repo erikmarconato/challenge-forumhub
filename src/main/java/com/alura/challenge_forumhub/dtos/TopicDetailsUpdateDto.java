@@ -12,6 +12,8 @@ public record TopicDetailsUpdateDto(
 
         String message,
 
+        String user,
+
         LocalDateTime creationDate,
 
         LocalDateTime updateDate,

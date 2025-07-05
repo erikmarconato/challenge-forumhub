@@ -34,7 +34,7 @@ public class AuthenticationService {
     }
 
     public ResponseEntity<Void> registerUser (RegisterUserDto registerUserDto){
-        if (userRepository.findByEmail(registerUserDto.email()) != null){
+        if (userRepository.findByEmail(registerUserDto.email()).isPresent()){
             return ResponseEntity.badRequest().build();
         }
 

@@ -14,6 +14,8 @@ public record TopicDetailsDto(
 
         String message,
 
+        String user,
+
         LocalDateTime creationDate,
 
         TopicStatusEnum status,
@@ -22,10 +24,11 @@ public record TopicDetailsDto(
 
         List<String> answers
 ) {
-    public TopicDetailsDto(Long id, String title, String message, LocalDateTime creationDate, TopicStatusEnum status, String curse, List<String> answers) {
+    public TopicDetailsDto(Long id, String title, String message, String user, LocalDateTime creationDate, TopicStatusEnum status, String curse, List<String> answers) {
         this.id = id;
         this.title = title;
         this.message = message;
+        this.user = user;
         this.creationDate = creationDate;
         this.status = status;
         this.curse = curse;
